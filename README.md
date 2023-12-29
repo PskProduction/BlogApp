@@ -1,24 +1,29 @@
-# frontend
+# Описание проекта
+Блог сайт DjangoRESTFramework + Vue, на главной странице которого отображается список постов.
 
-## Project setup
+## Контракт для API
+Названия роутов и ожидаемую структуру ответа от API endpoints можно найти в спецификации по адресу ниже (проект 
+при этом должен быть запущен):
+```http request
+/api/schema/swagger
 ```
-npm install
-```
+## Настройка проекта для работы
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+```bash
+pip install -r requirements.txt
 ```
 
-### Lints and fixes files
+## Подготовка базы данных
+Запуск миграций:
+```bash
+python3 manage.py migrate
 ```
-npm run lint
+Инициализация суперпользователя:
+```bash
+python manage.py createsuperuser
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Запуск проекта
+```bash
+ python manage.py runserver
+```
