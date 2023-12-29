@@ -11,12 +11,14 @@
 
 ```bash
 pip install -r requirements.txt
+npm run build
 ```
 
 ## Подготовка базы данных
 Запуск миграций:
 ```bash
-python3 manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 ```
 Инициализация суперпользователя:
 ```bash
